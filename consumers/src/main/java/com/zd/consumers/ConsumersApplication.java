@@ -1,4 +1,4 @@
-package com.zd.provider;
+package com.zd.consumers;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class ProviderApplication {
+public class ConsumersApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProviderApplication.class, args);
+		SpringApplication.run(ConsumersApplication.class, args);
 	}
 
 	@Value("${server.port}")
@@ -25,5 +25,4 @@ public class ProviderApplication {
 	{
 		return "hi " + name + ",i am from port:" + port;
 	}
-
 }

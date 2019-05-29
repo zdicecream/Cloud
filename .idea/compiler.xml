@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
         <module name="common" />
-        <module name="consumer" />
         <module name="consumer1" />
+        <module name="consumers" />
         <module name="eureka" />
         <module name="provider" />
       </profile>
@@ -20,6 +20,7 @@
       <module name="common" target="1.8" />
       <module name="consumer" target="1.8" />
       <module name="consumer1" target="1.8" />
+      <module name="consumers" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="eureka" target="1.8" />
       <module name="provider" target="1.8" />

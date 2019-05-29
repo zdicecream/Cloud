@@ -15,7 +15,7 @@
         <module>eureka</module>
         <module>api</module>
         <module>provider</module>
-        <module>consumer</module>
+        <module>consumers</module>
     </modules>
 
     <!--Spring Boot配置-->
