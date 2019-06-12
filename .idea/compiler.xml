@@ -14,14 +14,11 @@
         <module name="provider" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="api" target="1.8" />
       <module name="Cloud" target="1.8" />
       <module name="common" target="1.8" />
-      <module name="consumer" target="1.8" />
-      <module name="consumer1" target="1.8" />
       <module name="consumers" target="1.8" />
-      <module name="demo" target="1.8" />
       <module name="eureka" target="1.8" />
       <module name="provider" target="1.8" />
     </bytecodeTargetLevel>
