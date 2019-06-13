@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -121,5 +122,30 @@ public class ApiApplicationTests {
 		//strings.forEach((s -> System.out.println(s)));
 		strings.forEach(System.out::println);
 
+	}
+	@Test
+	public void testStreamAPI(){
+		List<Integer> strings = new ArrayList<>();
+		strings.addAll(Arrays.asList(12,123,124,125,1,312,31,23));
+
+		strings.stream().filter( integer -> integer>40).limit(3).forEach(System.out::println);
+
+		Stream s =  Stream.of("123","dfsdaf","rd21","41dd!");
+		System.out.println(s.anyMatch( str -> str.equals("123")));
+		//System.out.println(s.allMatch( str -> str.contains("1")));
+		System.out.println(Stream.of("C#", "C++")
+				.allMatch( abc -> abc.contains("2")));
+
+		System.out.println(strings.stream().filter(integer -> integer < 50).findFirst().get());
+		System.out.println(strings.stream().filter(integer -> integer < 50).findAny());
+
+		strings.stream().filter(integer -> integer<40)
+				.distinct()
+				.skip(1)
+				.sorted()
+				.limit(5)
+				.forEach(System.out::println);
+
+		System.out.println(strings.stream().filter(integer -> integer.compareTo(Integer.getInteger("0")) > 0).count());
 	}
 }
